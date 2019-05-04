@@ -78,10 +78,8 @@ Body.addEventListener("keydown", function(Key) {
       }
       UpdateText()
     } else if (KeyCode == "KeyE") {
-      if (EncodingEnabled == true) {
-        DownloadSongData = !DownloadSongData
-        UpdateText()
-      }
+      DownloadSongData = !DownloadSongData
+       UpdateText()
     } else if (KeyCode == "ArrowUp") {
       Volume = Volume + 5
       if (Volume > 100) {
