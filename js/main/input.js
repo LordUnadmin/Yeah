@@ -24,7 +24,7 @@ var Volume = StartVolume
 var PausedAt = 0
 var CurrentTimeOffset = 0
 var TimePausedAt = 0
-var DownloadSongData = false
+var DownloadSongData = true
 var LastDisplayed = 0
 DisplayTime = DisplayTime * 1000
 
@@ -78,8 +78,12 @@ Body.addEventListener("keydown", function(Key) {
       }
       UpdateText()
     } else if (KeyCode == "KeyE") {
+          if (Volume > 100) {
+        Volume = 100
+      
       DownloadSongData = !DownloadSongData
        UpdateText()
+      }
     } else if (KeyCode == "ArrowUp") {
       Volume = Volume + 5
       if (Volume > 100) {
